@@ -1,17 +1,21 @@
 # ESP32-S3 Enose Sensor Data Acquisition and Display
 This project is designed for the ESP32-S2 microcontroller, utilizing I2C communication to interface with multiple sensors and displaying real-time data on an LCD screen using LVGL.
 
-為NCKU WTMH實驗室電子鼻裝置行動化開發專案 (原專案參考: https://github.com/JimLin0406/E-nose-GUI-MEMS-version/tree/main)
+For the NCKU WTMH Laboratory's E-nose Device Mobilization Development Project 
+(original project reference: https://github.com/JimLin0406/E-nose-GUI-MEMS-version/tree/main)
+
+## Graphic User Interface
+Used "NXP GUI Guider" to design the framework of UI.
+
+<img src="./media/measPage.png" width="15%"><img src="./media/settingPage.png" width="15%"><img src="./media/keyborad.png" width="15%">
 
 ## Project Progress and Pending Tasks
 - [x] **I2C Device Initialization & Configuration:**
   - Successfully initialized HS4011, BME280, PCA9547, and MEMS I2C sensors.
   - Configured working modes and parameters for each I2C device.
 - [x] **Data Reading & Processing:**
-  - Successfully read data from HS4011, BME280, and MEMS sensors.
-  - Calculated and processed humidity, temperature, and pressure data.
+  - Calculated and processed humidity, temperature, pressure data, and resistant.
 - [x] **LVGL Display Setup:**
-  - Initialized the GC9A01 display and successfully displayed the graphical interface.
   - Set up CST816S touchscreen and integrated it with LVGL for touch interaction.
 - [x] **FreeRTOS Task Management:**
   - Created multiple tasks for I2C data reading, UI updates, and data processing.
@@ -24,8 +28,7 @@ This project is designed for the ESP32-S2 microcontroller, utilizing I2C communi
 - [ ] **Hardware modification:**
   - Power manage design (via battery).
   - Shell of device.
-  - Extra pumps for inhaling/ exhaling target sample.
-
+  - Extra pumps and valves for inhaling/ exhaling target sample.
 
 ## Requirements
 ### Hardware
@@ -42,7 +45,7 @@ This project is designed for the ESP32-S2 microcontroller, utilizing I2C communi
 ### Sofrware
 #### VS code IDE
   - ESP32-IDF (version 5.3.2)
-  - LVGL library (version 8.3.10)
+    
 #### Software Configuration
 Ensure that your sdkconfig has the necessary drivers enabled.
 ```
@@ -53,10 +56,6 @@ Ensure that your sdkconfig has the necessary drivers enabled.
   espressif/esp_lcd_touch: ^1.1.2
 ```
 
-## Graphic User Interface
-Used "NXP GUI Guider" to design the framework of UI.
-
-<img src="./media/measPage.png" width="15%"><img src="./media/settingPage.png" width="15%"><img src="./media/keyborad.png" width="15%">
 
 
 
