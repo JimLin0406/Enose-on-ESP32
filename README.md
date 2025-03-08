@@ -3,6 +3,30 @@ This project is designed for the ESP32-S2 microcontroller, utilizing I2C communi
 
 為NCKU WTMH實驗室電子鼻裝置行動化開發專案 (原專案參考: https://github.com/JimLin0406/E-nose-GUI-MEMS-version/tree/main)
 
+## Project Progress and Pending Tasks
+- [x] **I2C Device Initialization & Configuration:**
+  - Successfully initialized HS4011, BME280, PCA9547, and MEMS I2C sensors.
+  - Configured working modes and parameters for each I2C device.
+- [x] **Data Reading & Processing:**
+  - Successfully read data from HS4011, BME280, and MEMS sensors.
+  - Calculated and processed humidity, temperature, and pressure data.
+- [x] **LVGL Display Setup:**
+  - Initialized the GC9A01 display and successfully displayed the graphical interface.
+  - Set up CST816S touchscreen and integrated it with LVGL for touch interaction.
+- [x] **FreeRTOS Task Management:**
+  - Created multiple tasks for I2C data reading, UI updates, and data processing.
+  - Distribute task into two core on esp32-s3.
+  - Used a queue to manage the transmission and updating of sensor data.
+- [ ] **Data Saving Function:**
+  - Saving file via SPIFFS.
+- [ ] **Design the Analysis Page:**
+  - Implement analyais function via embeded qunatized MTL model.
+- [ ] **Hardware modification:**
+  - Power manage design (via battery).
+  - Shell of device.
+  - Extra pumps for inhaling/ exhaling target sample.
+
+
 ## Requirements
 ### Hardware
 - ESP32-S3 LCD ESP32-S3-Touch-LCD-1.28
@@ -31,6 +55,9 @@ Ensure that your sdkconfig has the necessary drivers enabled.
 
 ## Graphic User Interface
 Used "NXP GUI Guider" to design the framework of UI.
+
+<img src="./media/measPage.png" width="15%"><img src="./media/settingPage.png" width="15%"><img src="./media/keyborad.png" width="15%">
+
 
 
 
