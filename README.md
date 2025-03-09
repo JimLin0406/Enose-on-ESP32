@@ -1,7 +1,7 @@
 # ESP32-S3 Enose Sensor Data Acquisition and Display
 This project is designed for the ESP32-S2 microcontroller, utilizing I2C communication to interface with multiple sensors and displaying real-time data on an LCD screen using LVGL.
 
-For the NCKU WTMH Laboratory's E-nose Device Mobilization Development Project 
+For the NCKU WTMH Lab's E-nose device mobilization development project 
 (original project reference: https://github.com/JimLin0406/E-nose-GUI-MEMS-version/tree/main)
 
 ## Graphic User Interface
