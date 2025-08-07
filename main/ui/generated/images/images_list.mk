@@ -1,1 +1,0 @@
-GEN_CSRCS += _img_arrow_down_alpha_45x11.c _img_arrow_up_alpha_45x11.c
